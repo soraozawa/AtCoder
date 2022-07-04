@@ -15,7 +15,7 @@ int main(void)
     int best=-1, best_score=-1;
     for(int i=0;i<n;i++){
         if(st.find(s[i]) == st.end()){
-            st.insert(s[i])
+            st.insert(s[i]);
             if(t[i] > best_score){
                 best_score = t[i];
                 best = i;
