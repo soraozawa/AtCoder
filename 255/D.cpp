@@ -7,14 +7,14 @@ int main(void)
     int n, q;
     cin >> n >> q;
     vector<ll> a(n);
-    rep(i, n) cin >> a[i];
+    for(auto &nx : a)cin >> nx;
     sort(a.begin(), a.end());
 
     // 累積和を事前計算
     vector<ll> rw(n+1, 0);
-    rep(i, n)rw[n+1] = rw[n] + a[i];
+    for(ll i=0;i<n;i++)rw[i+1] = rw[i] + a[i];
 
-    for(int i=0;i<q;i++){
+    for(ll i=0;i<q;i++){
         ll x;
         cin >> x;
         int st = 0, fi = n-1;
